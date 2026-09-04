@@ -1,0 +1,154 @@
+import weaviate
+from weaviate.auth import AuthApiKey
+import boto3
+import os 
+import logging
+from botocore.exceptions import ClientError
+import PyPDF2
+import json
+import requests
+import weaviate.classes as wvc
+from weaviate.classes.config import Configure, Property, DataType, Vectorizers
+
+# ---------------------------
+# 1) CONFIG
+# ---------------------------
+region = "us-east-1"
+bucket = "mypozo"
+key = "sagemaker.pdf"
+local_file = "/Users/nicol/Downloads/sagemaker2.pdf"
+# endpoint: reemplaza por el "collectionEndpoint" (host) que obtendrás de AOSS
+weaviate_url = "avddl1srsz2l8sgloxw3wa.c0.us-west3.gcp.weaviate.cloud" 
+weaviate_api_key = "RHFkOHZBZnAveHJ4VjlMV183N0ZqWEVaR2NHT1RybXhmWmF6OUdPcXNZVlpSQ1REWUxSemZuZ3YyMXdRPV92MjAw"
+
+# Modelos en Bedrock (ajusta si usas v2)
+bedrock_model_embeddings = "amazon.titan-embed-text-v1"  # v1 -> tipicamente 1536 dim
+bedrock_model_llm = "anthropic.claude-v2"
+
+# ---------------------------
+# 2) CLIENTS AWS
+# ---------------------------
+s3 = boto3.client("s3", region_name=region)
+bedrock = boto3.client("bedrock-runtime", region_name=region)
+
+
+client = weaviate.connect_to_weaviate_cloud(
+    cluster_url=weaviate_url,
+    auth_credentials=AuthApiKey(weaviate_api_key), # optional
+    # You can also pass a headers dictionary if needed
+    # headers={"x-api-key": "YOUR_OPENAI_API_KEY"}
+)
+
+# ---------------------------
+# 3) DESCARGAR Y EXTRAER TEXTO
+# ---------------------------
+print("📥 Descargando PDF desde S3...")
+s3.download_file(bucket, key, local_file)
+
+print("📖 Extrayendo texto del PDF...")
+pdf_text = ""
+with open(local_file, "rb") as f:
+    reader = PyPDF2.PdfReader(f)
+    for page in reader.pages:
+        text = page.extract_text() or ""
+        pdf_text += text + "\n"
+
+print("✅ Texto extraído. Primeros 500 chars:")
+print(pdf_text[:500])
+
+# dividir en chunks (puedes ajustar tamaño y overlap)
+chunk_size = 500
+chunks = [pdf_text[i:i+chunk_size] for i in range(0, len(pdf_text), chunk_size)]
+
+# ---------------------------
+# 4) FUNCIONES BEDROCK
+# ---------------------------
+def get_embedding(text, model_id=bedrock_model_embeddings):
+    """Invoca Bedrock para generar embedding y devuelve la lista de floats."""
+    payload = {"inputText": text}
+    resp = bedrock.invoke_model(modelId=model_id, body=json.dumps(payload))
+    body_bytes = resp["body"].read()
+    result = json.loads(body_bytes.decode("utf-8"))
+    # Nota: la estructura exacta puede variar por modelo; lo más común:
+    # result["embedding"] -> list[float]
+    # Si no existe, imprime result para inspección.
+    emb = result.get("embedding") or result.get("embeddings")
+    if emb is None:
+        # para debug: imprime la respuesta del modelo
+        raise RuntimeError(f"No se encontró 'embedding' en la respuesta de Bedrock: {result}")
+    return emb
+
+def ask_bedrock(question, context, model_id=bedrock_model_llm):
+    """Pregunta al LLM pasando contexto (RAG)."""
+    prompt = f"Usa el siguiente contexto:\n{context}\n\nPregunta: {question}\nRespuesta:"
+    payload = {"inputText": prompt}
+    resp = bedrock.invoke_model(modelId=model_id, body=json.dumps(payload))
+    body_bytes = resp["body"].read()
+    result = json.loads(body_bytes.decode("utf-8"))
+    # la clave para texto suele ser "outputText" o similar según modelo -> revisa la doc del modelo
+    return result.get("outputText") or result.get("content") or json.dumps(result)
+
+# ---------------------------
+# 5) CREATE WEAVIATE SCHEMA
+# ---------------------------
+class_name = "PDFDocument"
+
+try:
+    if not client.collections.exists(class_name):
+        client.collections.create(
+            name=class_name,
+            vectorizer_config=wvc.config.Configure.Vectorizer.none(),
+            properties=[
+                wvc.config.Property(
+                    name="content",
+                    data_type=wvc.config.DataType.TEXT,
+                )
+            ]
+        )
+        print(f"⚙️ Schema '{class_name}' created.")
+    else:
+        print(f"⚙️ Schema '{class_name}' already exists.")
+except requests.exceptions.HTTPError as e:
+    print(f"⚠️ Error creating schema: {e}")
+# ---------------------------
+# 6) INDEX CHUNKS IN WEAVIATE
+# ---------------------------
+print("📤 Generando embeddings e indexando en Weaviate...")
+with client.batch.dynamic() as batch:
+    for i, chunk in enumerate(chunks):
+        emb = get_embedding(chunk)
+        
+        # New v4 syntax for adding data objects
+        batch.add_object(
+            collection=class_name,
+            properties={"content": chunk},
+            vector=emb
+        )
+
+print("✅ PDF indexado en Weaviate.")
+
+# ---------------------------
+# 7) BÚSQUEDA + LLM (Weaviate)
+# ---------------------------
+def search_context(question, k=3):
+    q_emb = get_embedding(question)
+    
+    response = client.collections.get(class_name).query.near_vector(
+        near_vector=q_emb,
+        limit=k
+    )
+    
+    context = "\n".join([o.properties["content"] for o in response.objects])
+    return context
+
+# ---------------------------
+# 8) LOOP INTERACTIVO
+# ---------------------------
+if __name__ == "__main__":
+    while True:
+        pregunta = input("\n❓ Pregunta (o escribe 'salir'): ")
+        if pregunta.lower() in ("salir", "exit", "quit"):
+            break
+        contexto = search_context(pregunta)
+        respuesta = ask_bedrock(pregunta, contexto)
+        print(f"\n🤖 Respuesta:\n{respuesta}\n")
