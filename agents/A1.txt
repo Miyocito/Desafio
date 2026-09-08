@@ -1,0 +1,328 @@
+# A1 — Analista de Casos: Extracción Básica
+
+## Objetivo
+
+Implementar únicamente la primera versión funcional del Agente 1 (A1) del sistema de detección de fraude.
+
+A1 debe recibir una transcripción de una llamada bancaria y utilizar un LLM para extraer entidades relevantes de fraude, devolviendo un objeto estructurado y validado mediante Pydantic.
+
+Esta implementación debe ser simple y estar preparada para ser extendida posteriormente con procesamiento batch, reintentos, logging, Streamlit y los agentes A2-A5.
+
+## Alcance
+
+Implementar solamente:
+
+1. Modelo Pydantic para representar el resultado de A1.
+2. Integración con Google Gemini.
+3. Prompt de extracción en español.
+4. Método `process_case()`.
+5. Validación de la respuesta del LLM mediante Pydantic.
+6. Un caso de prueba manual que permita comprobar el funcionamiento.
+
+## Fuera de alcance
+
+NO implementar todavía:
+
+* A2, A3, A4 ni A5.
+* LangGraph.
+* Streamlit.
+* Procesamiento batch.
+* Procesamiento de archivos CSV.
+* Reintentos automáticos.
+* Logging estructurado.
+* Exportación JSONL.
+* Backtesting.
+* Base de datos.
+* Sistema de trazabilidad de los cinco agentes.
+* Paralelización.
+* Tests de property-based testing.
+
+Estas funcionalidades serán implementadas en iteraciones posteriores.
+
+---
+
+# Estructura
+
+Crear únicamente la siguiente estructura:
+
+```text
+proyecto/
+├── agents/
+│   ├── __init__.py
+│   └── a1_analyst.py
+├── models/
+│   ├── __init__.py
+│   └── schemas.py
+├── test_a1.py
+├── requirements.txt
+├── .env.example
+└── .gitignore
+```
+
+No crear archivos o módulos adicionales sin que sean necesarios para este alcance.
+
+---
+
+# 1. Modelo Pydantic
+
+Crear `models/schemas.py`.
+
+Definir los siguientes modelos:
+
+```python
+from pydantic import BaseModel, Field
+from datetime import datetime
+
+
+class UbicacionGeografica(BaseModel):
+    ciudad: str | None = None
+    pais: str | None = None
+
+
+class CasoExtraido(BaseModel):
+    case_id: str
+    timestamp: datetime
+    transcript_text: str
+
+    monto_reportado: float | None = None
+    moneda: str | None = None
+    comercio_nombre: str | None = None
+    comercio_categoria: str | None = None
+    modus_operandi: str | None = None
+    canal_fraude: str | None = None
+
+    ubicacion_geografica: UbicacionGeografica = Field(
+        default_factory=UbicacionGeografica
+    )
+
+    nivel_confianza_extraccion: float = Field(
+        ge=0.0,
+        le=1.0
+    )
+```
+
+No agregar todavía campos adicionales como:
+
+* `datos_cliente`
+* `entidades_adicionales`
+* `status`
+
+Esos campos podrán agregarse posteriormente si son necesarios.
+
+---
+
+# 2. Integración con Gemini
+
+Crear `agents/a1_analyst.py`.
+
+Crear una clase:
+
+```python
+class A1Analyst:
+```
+
+El constructor debe recibir la API key mediante variable de entorno:
+
+```text
+GEMINI_API_KEY
+```
+
+No colocar ninguna API key directamente en el código.
+
+El modelo utilizado debe poder configurarse mediante:
+
+```text
+GEMINI_MODEL
+```
+
+Si `GEMINI_MODEL` no existe, utilizar un modelo Gemini apropiado disponible para la API configurada.
+
+No fijar innecesariamente una versión antigua del modelo.
+
+---
+
+# 3. Método process_case()
+
+Implementar:
+
+```python
+def process_case(
+    self,
+    case_id: str,
+    timestamp: datetime,
+    transcript: str
+) -> CasoExtraido:
+```
+
+Este método debe:
+
+1. Recibir `case_id`, `timestamp` y `transcript`.
+2. Enviar la transcripción al LLM.
+3. Solicitar exclusivamente la extracción de las entidades definidas en `CasoExtraido`.
+4. Obtener una respuesta estructurada.
+5. Validar la respuesta mediante Pydantic.
+6. Agregar `case_id`, `timestamp` y `transcript_text` desde los valores originales recibidos.
+7. Retornar un objeto `CasoExtraido`.
+
+Los campos `case_id`, `timestamp` y `transcript_text` NO deben depender de lo que responda el LLM.
+
+---
+
+# 4. Prompt
+
+El prompt debe estar en español.
+
+A1 debe comportarse como un analista de fraude bancario cuya función es exclusivamente extraer información presente en la transcripción.
+
+Debe identificar, cuando exista:
+
+* monto involucrado;
+* moneda;
+* comercio;
+* categoría del comercio;
+* modus operandi;
+* canal;
+* ciudad;
+* país;
+* nivel de confianza de la extracción.
+
+Reglas importantes:
+
+* No inventar información.
+* Si un dato no aparece o no puede inferirse razonablemente, utilizar `null`.
+* No inventar montos.
+* No inventar comercios.
+* No inventar ubicaciones.
+* La información debe estar basada en la transcripción.
+* La salida debe ser JSON estructurado.
+* No incluir explicaciones fuera del JSON.
+
+El prompt debe indicar explícitamente el esquema esperado.
+
+---
+
+# 5. Salida esperada
+
+Para una transcripción como:
+
+"Hola, quiero desconocer una compra de $450.000 realizada ayer en TechStore. Yo nunca hice esa compra. Además, recibí una llamada donde me solicitaron realizar una transferencia para recuperar el dinero."
+
+A1 debería producir una estructura equivalente a:
+
+```json
+{
+  "monto_reportado": 450000,
+  "moneda": "CLP",
+  "comercio_nombre": "TechStore",
+  "comercio_categoria": null,
+  "modus_operandi": "transferencia_no_autorizada",
+  "canal_fraude": "telefono",
+  "ubicacion_geografica": {
+    "ciudad": null,
+    "pais": null
+  },
+  "nivel_confianza_extraccion": 0.9
+}
+```
+
+Los valores exactos de confianza pueden variar.
+
+Lo importante es que la respuesta sea validada por Pydantic.
+
+---
+
+# 6. Validación
+
+La respuesta del LLM debe convertirse a:
+
+```python
+CasoExtraido
+```
+
+utilizando validación de Pydantic.
+
+Si el LLM entrega:
+
+* JSON inválido;
+* un tipo incorrecto;
+* confianza fuera de `[0, 1]`;
+* estructura incompatible;
+
+la función debe lanzar una excepción clara.
+
+No implementar todavía reintentos automáticos.
+
+---
+
+# 7. Test manual
+
+Crear `test_a1.py`.
+
+Debe:
+
+1. Cargar las variables de entorno.
+2. Crear una instancia de `A1Analyst`.
+3. Definir una transcripción de prueba.
+4. Ejecutar `process_case()`.
+5. Imprimir el resultado como JSON.
+
+Ejemplo conceptual:
+
+```python
+result = agent.process_case(
+    case_id="CALL-001",
+    timestamp=datetime.now(),
+    transcript="..."
+)
+
+print(result.model_dump_json(indent=2))
+```
+
+El objetivo es poder ejecutar:
+
+```bash
+python test_a1.py
+```
+
+y observar un JSON válido generado por A1.
+
+---
+
+# 8. Dependencias
+
+Utilizar únicamente las dependencias necesarias para esta primera implementación.
+
+Como mínimo:
+
+```text
+pydantic
+python-dotenv
+langchain-core
+langchain-google-genai
+```
+
+Agregar otras dependencias solamente si son realmente necesarias.
+
+---
+
+# 9. Criterios de aceptación
+
+La implementación estará terminada cuando:
+
+* [ ] `A1Analyst` pueda inicializarse correctamente.
+* [ ] La API key no esté escrita en el código.
+* [ ] Una transcripción pueda enviarse al LLM.
+* [ ] El LLM devuelva una estructura JSON.
+* [ ] La estructura pueda validarse mediante Pydantic.
+* [ ] `case_id` provenga del argumento original.
+* [ ] `timestamp` provenga del argumento original.
+* [ ] `transcript_text` sea exactamente la transcripción original.
+* [ ] La confianza esté entre `0.0` y `1.0`.
+* [ ] Los datos no presentes puedan ser `null`.
+* [ ] `python test_a1.py` produzca un `CasoExtraido` válido.
+
+## Restricción principal
+
+No implementar funcionalidades pertenecientes a las siguientes etapas del proyecto.
+
+Primero debe quedar funcionando correctamente esta versión mínima de A1. Las funcionalidades adicionales se incorporarán mediante nuevas iteraciones.
