@@ -1,0 +1,172 @@
+transaction_id,timestamp,monto,moneda,comercio_nombre,comercio_categoria,canal,ciudad,pais,modus_operandi,fraude_confirmado
+HIST-001,2026-09-01T09:00:00,430000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-002,2026-09-01T09:10:00,390000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-003,2026-09-01T09:20:00,520000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-004,2026-09-02T11:00:00,120000,CLP,SuperStore,retail,web,Santiago,Chile,cargo no reconocido,false
+HIST-005,2026-09-02T12:30:00,470000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-006,2026-09-03T08:00:00,460000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-007,2026-09-04T14:15:00,86000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-008,2026-09-04T22:40:00,510000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-009,2026-09-05T18:05:00,250000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-010,2026-09-06T20:30:00,280000,CLP,SuperStore,retail,app,Valparaiso,Chile,consulta de saldo,false
+RUN20260909032742-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,Compra desconocida y llamada fraudulenta para solicitar transferencia,true
+RUN20260909032742-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing,true
+RUN20260909032742-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260909032742-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260909032742-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono,true
+RUN20260909033431-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia para recuperar dinero,true
+RUN20260909033431-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260909033431-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260909033431-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260909033431-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP mediante llamada telefonica,true
+RUN20260908161135-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260908161135-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,llamada falsa pidiendo validar un código para compra no reconocida,true
+RUN20260908161135-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260908161135-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908161135-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono para aprobar compra no reconocida,true
+RUN20260908161303-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia para recuperar dinero,true
+RUN20260908161303-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908161303-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908161303-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908161303-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP para compra no reconocida,true
+RUN20260908161720-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada fraudulenta para solicitar transferencia,true
+RUN20260908161720-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260908161720-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908161720-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908161720-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Ingenieria social pidiendo codigo OTP para compra no reconocida,true
+RUN20260908161841-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia,true
+RUN20260908161841-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,llamada falsa del banco para validar código,true
+RUN20260908161841-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia,true
+RUN20260908161841-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908161841-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono fingiendo resolver compra no reconocida,true
+RUN20260908162139-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia y desconocido de compra,true
+RUN20260908162139-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908162139-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908162139-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908162139-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono para compra no reconocida,true
+RUN20260908162742-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada solicitando transferencia,true
+RUN20260908162742-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código,true
+RUN20260908162742-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar una compra no reconocida,true
+RUN20260908162742-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908162742-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Ingenieria social pidiendo codigo OTP para compra no reconocida,true
+RUN20260909111522-TX-001,2026-09-09T11:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260909111522-TX-002,2026-09-09T11:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260909111522-TX-003,2026-09-09T11:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260909111522-TX-004,2026-09-09T11:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260909111522-TX-005,2026-09-09T11:20:00,480000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+RUN20260909142011-TX-001,2026-09-09T14:00:00,500000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260909142011-TX-002,2026-09-09T14:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260909142011-TX-003,2026-09-09T14:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260909142011-TX-004,2026-09-09T14:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260909142011-TX-005,2026-09-09T14:20:00,530000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+RUN20260909164530-TX-001,2026-09-09T16:00:00,420000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260909164530-TX-002,2026-09-09T16:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260909164530-TX-003,2026-09-09T16:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260909164530-TX-004,2026-09-09T16:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260909164530-TX-005,2026-09-09T16:20:00,440000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+RUN20260910090015-TX-001,2026-09-10T09:00:00,480000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260910090015-TX-002,2026-09-10T09:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260910090015-TX-003,2026-09-10T09:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260910090015-TX-004,2026-09-10T09:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260910090015-TX-005,2026-09-10T09:20:00,510000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+RUN20260910113045-TX-001,2026-09-10T11:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260910113045-TX-002,2026-09-10T11:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260910113045-TX-003,2026-09-10T11:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260910113045-TX-004,2026-09-10T11:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260910113045-TX-005,2026-09-10T11:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+RUN20260910151500-TX-001,2026-09-10T15:00:00,420000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada para solicitar transferencia,true
+RUN20260910151500-TX-002,2026-09-10T15:05:00,0.0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código para compra no reconocida,true
+RUN20260910151500-TX-003,2026-09-10T15:10:00,0.0,CLP,TechStore,e-commerce,telefono,,,llamada de soporte falsa para solicitar transferencia por compra no reconocida,true
+RUN20260910151500-TX-004,2026-09-10T15:15:00,0.0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260910151500-TX-005,2026-09-10T15:20:00,440000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de código OTP por teléfono para aprobar compra no reconocida,true
+HIST-011,2026-09-02T14:35:00,125000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-012,2026-09-05T09:35:00,85000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-013,2026-09-07T18:35:00,310000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-014,2026-09-01T20:35:00,245000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-015,2026-09-09T11:35:00,190000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-016,2026-09-04T15:35:00,45000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-017,2026-09-08T21:35:00,280000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-018,2026-09-03T10:35:00,340000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-019,2026-09-11T16:35:00,115000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-020,2026-09-06T12:35:00,62000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-021,2026-09-10T19:35:00,210000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-022,2026-09-05T14:35:00,135000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-023,2026-09-02T11:35:00,295000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-024,2026-09-08T09:35:00,75000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-025,2026-09-12T15:35:00,320000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+RUN20260908163509-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia,true
+RUN20260908163509-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908163509-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908163509-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908163509-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+transaction_id,timestamp,monto,moneda,comercio_nombre,comercio_categoria,canal,ciudad,pais,modus_operandi,fraude_confirmado
+HIST-001,2026-09-01T09:00:00,430000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-002,2026-09-01T09:10:00,390000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-003,2026-09-01T09:20:00,520000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-004,2026-09-02T11:00:00,120000,CLP,SuperStore,retail,web,Santiago,Chile,cargo no reconocido,false
+HIST-005,2026-09-02T12:30:00,470000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-006,2026-09-03T08:00:00,460000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-007,2026-09-04T14:15:00,86000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-008,2026-09-04T22:40:00,510000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-009,2026-09-05T18:05:00,250000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-010,2026-09-06T20:30:00,280000,CLP,SuperStore,retail,app,Valparaiso,Chile,consulta de saldo,false
+HIST-011,2026-09-06T21:05:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-012,2026-09-06T21:15:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-013,2026-09-06T21:25:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-014,2026-09-06T21:35:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-015,2026-09-06T21:45:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-016,2026-09-07T08:00:00,180000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-017,2026-09-07T08:30:00,95000,CLP,SuperStore,retail,web,Santiago,Chile,consulta de cargo,false
+HIST-018,2026-09-07T09:00:00,130000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-019,2026-09-07T10:00:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-020,2026-09-07T10:10:00,435000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-021,2026-09-07T10:20:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-022,2026-09-07T10:30:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-023,2026-09-07T10:40:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-024,2026-09-07T11:00:00,210000,CLP,SuperStore,retail,app,Santiago,Chile,consulta de saldo,false
+HIST-025,2026-09-07T11:15:00,225000,CLP,SuperStore,retail,app,Santiago,Chile,compra normal,false
+HIST-026,2026-09-07T11:30:00,240000,CLP,BookHub,retail,web,Concepcion,Chile,compra normal,false
+HIST-027,2026-09-07T11:45:00,260000,CLP,TravelNow,viajes,web,Valparaiso,Chile,consulta de saldo,false
+HIST-028,2026-09-07T12:00:00,375000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-029,2026-09-07T12:10:00,385000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-030,2026-09-07T12:20:00,395000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908164539-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada para solicitar transferencia,true
+RUN20260908164539-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908164539-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908164539-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908164539-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP mediante llamada telefonica para compra no reconocida,true
+RUN20260908165002-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no autorizada y llamada para solicitar transferencia,true
+RUN20260908165002-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código,true
+RUN20260908165002-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908165002-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908165002-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono,true
+RUN20260908165149-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no reconocida y llamada solicitando transferencia,true
+RUN20260908165149-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908165149-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908165149-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908165149-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de OTP mediante llamada telefónica,true
+RUN20260908165559-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no autorizada y llamada para solicitar transferencia,true
+RUN20260908165559-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,llamada falsa de validación de código para compra no reconocida,true
+RUN20260908165559-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,desconocido,telefono,,,llamada de soporte simulada para solicitar transferencia,true
+RUN20260908165559-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908165559-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono,true
+RUN20260908170216-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,Cargo no reconocido seguido de llamada para solicitar transferencia,true
+RUN20260908170216-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,llamada falsa del banco para validar codigo,true
+RUN20260908170216-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908170216-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908170216-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP mediante llamada telefonica,true
+RUN20260908170547-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,compra no autorizada y llamada de suplantacion,true
+RUN20260908170547-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validación de código,true
+RUN20260908170547-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908170547-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908170547-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP mediante llamada telefonica,true
+RUN20260908170902-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada fraudulenta para solicitar transferencia,true
+RUN20260908170902-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908170902-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908170902-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908170902-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de OTP por llamada telefonica,true
+RUN20260908171336-TX-001,2026-09-08T10:00:00,450000.0,CLP,TechStore,e-commerce,telefono,,,llamada fraudulenta para solicitar transferencia,true
+RUN20260908171336-TX-002,2026-09-08T10:05:00,0,CLP,TechStore,desconocido,telefono,,,vishing con validacion de codigo para compra no reconocida,true
+RUN20260908171336-TX-003,2026-09-08T10:10:00,0,CLP,TechStore,e-commerce,telefono,,,Llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+RUN20260908171336-TX-004,2026-09-08T10:15:00,0,CLP,TechStore,desconocido,telefono,,,compra no reconocida y solicitud de transferencia,true
+RUN20260908171336-TX-005,2026-09-08T10:20:00,470000.0,CLP,TechStore,e-commerce,telefono,,,Solicitud de codigo OTP por telefono para compra no reconocida,true
