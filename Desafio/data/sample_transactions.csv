@@ -1,0 +1,11 @@
+transaction_id,timestamp,monto,moneda,comercio_nombre,comercio_categoria,canal,ciudad,pais,modus_operandi,fraude_confirmado
+TX-001,2026-09-01T10:30:00,450000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-002,2026-09-01T11:20:00,380000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-003,2026-09-02T14:10:00,520000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-004,2026-09-03T09:20:00,120000,CLP,SuperStore,retail,web,Santiago,Chile,cargo no reconocido,false
+TX-005,2026-09-03T09:40:00,460000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-006,2026-09-04T18:05:00,310000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-007,2026-09-05T13:15:00,78000,CLP,SuperStore,retail,app,Valparaiso,Chile,consulta de saldo,false
+TX-008,2026-09-05T20:45:00,250000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+TX-009,2026-09-06T08:10:00,145000,CLP,TravelNow,viajes,web,Santiago,Chile,phishing,false
+TX-010,2026-09-06T22:30:00,490000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
