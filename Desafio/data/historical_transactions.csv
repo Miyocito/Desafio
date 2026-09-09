@@ -1,0 +1,257 @@
+transaction_id,timestamp,monto,moneda,comercio_nombre,comercio_categoria,canal,ciudad,pais,modus_operandi,fraude_confirmado
+HIST-001,2026-09-01T09:00:00,430000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-002,2026-09-01T09:10:00,390000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-003,2026-09-01T09:20:00,520000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-004,2026-09-02T11:00:00,120000,CLP,SuperStore,retail,web,Santiago,Chile,cargo no reconocido,false
+HIST-005,2026-09-02T12:30:00,470000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-006,2026-09-03T08:00:00,460000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-007,2026-09-04T14:15:00,86000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-008,2026-09-04T22:40:00,510000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-009,2026-09-05T18:05:00,250000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-010,2026-09-06T20:30:00,280000,CLP,SuperStore,retail,app,Valparaiso,Chile,consulta de saldo,false
+HIST-011,2026-09-02T14:35:00,125000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-012,2026-09-05T09:35:00,85000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-013,2026-09-07T18:35:00,310000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-014,2026-09-01T20:35:00,245000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-015,2026-09-09T11:35:00,190000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-016,2026-09-04T15:35:00,45000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-017,2026-09-08T21:35:00,280000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-018,2026-09-03T10:35:00,340000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-019,2026-09-11T16:35:00,115000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-020,2026-09-06T12:35:00,62000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-021,2026-09-10T19:35:00,210000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-022,2026-09-05T14:35:00,135000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-023,2026-09-02T11:35:00,295000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-024,2026-09-08T09:35:00,75000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-025,2026-09-12T15:35:00,320000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-001,2026-09-01T09:00:00,430000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-002,2026-09-01T09:10:00,390000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-003,2026-09-01T09:20:00,520000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-004,2026-09-02T11:00:00,120000,CLP,SuperStore,retail,web,Santiago,Chile,cargo no reconocido,false
+HIST-005,2026-09-02T12:30:00,470000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-006,2026-09-03T08:00:00,460000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-007,2026-09-04T14:15:00,86000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-008,2026-09-04T22:40:00,510000,CLP,ElectroMarket,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-009,2026-09-05T18:05:00,250000,CLP,TechStore,tecnologia,telefono,Santiago,Chile,cargo no reconocido y vishing,true
+HIST-010,2026-09-06T20:30:00,280000,CLP,SuperStore,retail,app,Valparaiso,Chile,consulta de saldo,false
+HIST-011,2026-09-06T21:05:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-012,2026-09-06T21:15:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-013,2026-09-06T21:25:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-014,2026-09-06T21:35:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-015,2026-09-06T21:45:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-016,2026-09-07T08:00:00,180000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-017,2026-09-07T08:30:00,95000,CLP,SuperStore,retail,web,Santiago,Chile,consulta de cargo,false
+HIST-018,2026-09-07T09:00:00,130000,CLP,TravelNow,viajes,web,Valparaiso,Chile,phishing,false
+HIST-019,2026-09-07T10:00:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-020,2026-09-07T10:10:00,435000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-021,2026-09-07T10:20:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-022,2026-09-07T10:30:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-023,2026-09-07T10:40:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-024,2026-09-07T11:00:00,210000,CLP,SuperStore,retail,app,Santiago,Chile,consulta de saldo,false
+HIST-025,2026-09-07T11:15:00,225000,CLP,SuperStore,retail,app,Santiago,Chile,compra normal,false
+HIST-026,2026-09-07T11:30:00,240000,CLP,BookHub,retail,web,Concepcion,Chile,compra normal,false
+HIST-027,2026-09-07T11:45:00,260000,CLP,TravelNow,viajes,web,Valparaiso,Chile,consulta de saldo,false
+HIST-028,2026-09-07T12:00:00,375000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-029,2026-09-07T12:10:00,385000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-030,2026-09-07T12:20:00,395000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-031,2026-09-07T12:30:00,410000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-032,2026-09-07T12:40:00,425000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-033,2026-09-07T14:00:00,85000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-034,2026-09-07T15:15:00,120000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-035,2026-09-07T16:45:00,310000,CLP,ElectroMarket,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-036,2026-09-07T22:00:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-037,2026-09-07T22:10:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-038,2026-09-07T22:20:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-039,2026-09-07T22:30:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-040,2026-09-07T22:40:00,500000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-041,2026-09-08T01:15:00,850000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-042,2026-09-08T01:20:00,920000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-043,2026-09-08T01:25:00,780000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-044,2026-09-08T02:00:00,60000,CLP,SuperStore,retail,web,Valparaiso,Chile,compra normal,false
+HIST-045,2026-09-08T08:30:00,110000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-046,2026-09-08T10:00:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-047,2026-09-08T10:10:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-048,2026-09-08T10:20:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-049,2026-09-08T10:30:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-050,2026-09-08T10:40:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-051,2026-09-08T13:20:00,55000,CLP,GasStation,combustible,pos,Santiago,Chile,compra normal,false
+HIST-052,2026-09-08T14:40:00,230000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-053,2026-09-08T16:00:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-054,2026-09-08T16:10:00,445000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-055,2026-09-08T16:20:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-056,2026-09-08T16:30:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-057,2026-09-08T16:40:00,475000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-058,2026-09-09T03:10:00,890000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-059,2026-09-09T03:15:00,950000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-060,2026-09-09T09:30:00,125000,CLP,SuperStore,retail,app,Valparaiso,Chile,compra normal,false
+HIST-061,2026-09-09T14:10:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-062,2026-09-09T14:20:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-063,2026-09-09T14:30:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-064,2026-09-09T14:40:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-065,2026-09-09T14:50:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-066,2026-09-09T15:30:00,310000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-067,2026-09-09T16:15:00,185000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-068,2026-09-09T17:00:00,95000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-069,2026-09-09T19:20:00,240000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-070,2026-09-09T20:45:00,115000,CLP,BookHub,retail,web,Santiago,Chile,compra normal,false
+HIST-071,2026-09-10T01:30:00,720000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-072,2026-09-10T02:00:00,810000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-073,2026-09-10T02:15:00,690000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-074,2026-09-10T09:15:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-075,2026-09-10T09:25:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-076,2026-09-10T09:35:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-077,2026-09-10T09:45:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-078,2026-09-10T09:55:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-079,2026-09-10T11:20:00,130000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-080,2026-09-10T13:40:00,68000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-081,2026-09-10T15:10:00,290000,CLP,ElectroMarket,tecnologia,app,Santiago,Chile,compra normal,false
+HIST-082,2026-09-10T18:30:00,415000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-083,2026-09-10T18:40:00,425000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-084,2026-09-10T18:50:00,435000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-085,2026-09-10T19:00:00,445000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-086,2026-09-10T19:10:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-087,2026-09-11T02:10:00,940000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-088,2026-09-11T03:45:00,880000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-089,2026-09-11T10:00:00,150000,CLP,SuperStore,retail,web,Valparaiso,Chile,compra normal,false
+HIST-090,2026-09-11T12:15:00,75000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-091,2026-09-11T14:30:00,340000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-092,2026-09-11T16:00:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-093,2026-09-11T16:10:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-094,2026-09-11T16:20:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-095,2026-09-11T16:30:00,500000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-096,2026-09-11T16:40:00,510000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-097,2026-09-11T18:15:00,65000,CLP,GasStation,combustible,pos,Santiago,Chile,compra normal,false
+HIST-098,2026-09-11T20:30:00,210000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-099,2026-09-12T01:22:00,830000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-100,2026-09-12T02:40:00,910000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-101,2026-09-12T03:15:00,760000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-102,2026-09-12T04:05:00,890000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-103,2026-09-12T09:00:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-104,2026-09-12T09:10:00,445000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-105,2026-09-12T09:20:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-106,2026-09-12T09:30:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-107,2026-09-12T09:40:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-108,2026-09-12T11:15:00,140000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-109,2026-09-12T13:00:00,85000,CLP,SuperStore,retail,web,Valparaiso,Chile,compra normal,false
+HIST-110,2026-09-12T15:20:00,320000,CLP,ElectroMarket,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-111,2026-09-12T18:00:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-112,2026-09-12T18:10:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-113,2026-09-12T18:20:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-114,2026-09-12T18:30:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-115,2026-09-12T18:40:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-116,2026-09-13T02:10:00,950000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-117,2026-09-13T03:30:00,870000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-118,2026-09-13T10:15:00,110000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-119,2026-09-13T12:45:00,55000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-120,2026-09-13T15:00:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-121,2026-09-13T15:10:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-122,2026-09-13T15:20:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-123,2026-09-13T15:30:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-124,2026-09-13T15:40:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-125,2026-09-13T19:30:00,175000,CLP,SuperStore,retail,web,Santiago,Chile,compra normal,false
+HIST-126,2026-09-14T01:50:00,680000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-127,2026-09-14T03:10:00,790000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-128,2026-09-14T09:30:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-129,2026-09-14T09:40:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-130,2026-09-14T09:50:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-131,2026-09-14T10:00:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-132,2026-09-14T10:10:00,485000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-133,2026-09-14T11:45:00,90000,CLP,BookHub,retail,web,Valparaiso,Chile,compra normal,false
+HIST-134,2026-09-14T14:20:00,295000,CLP,ElectroMarket,tecnologia,app,Santiago,Chile,compra normal,false
+HIST-135,2026-09-14T16:10:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-136,2026-09-14T16:20:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-137,2026-09-14T16:30:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-138,2026-09-14T16:40:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-139,2026-09-14T16:50:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-140,2026-09-15T02:05:00,810000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-141,2026-09-15T03:40:00,930000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-142,2026-09-15T09:15:00,120000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-143,2026-09-15T11:00:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-144,2026-09-15T11:10:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-145,2026-09-15T11:20:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-146,2026-09-15T11:30:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-147,2026-09-15T11:40:00,495000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-148,2026-09-15T14:35:00,62000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-149,2026-09-15T16:40:00,340000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-150,2026-09-15T21:00:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-151,2026-09-15T21:10:00,435000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-152,2026-09-15T21:20:00,445000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-153,2026-09-15T21:30:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-154,2026-09-15T21:40:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-155,2026-09-16T02:15:00,740000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-156,2026-09-16T03:50:00,860000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-157,2026-09-16T10:00:00,135000,CLP,SuperStore,retail,web,Santiago,Chile,compra normal,false
+HIST-158,2026-09-16T11:15:00,240000,CLP,TravelNow,viajes,web,Valparaiso,Chile,compra normal,false
+HIST-159,2026-09-16T14:00:00,310000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-160,2026-09-16T15:30:00,80000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-161,2026-09-16T17:00:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-162,2026-09-16T17:10:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-163,2026-09-16T17:20:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-164,2026-09-16T17:30:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-165,2026-09-16T17:40:00,490000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-166,2026-09-16T19:15:00,95000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-167,2026-09-16T21:40:00,125000,CLP,SuperStore,retail,app,Concepcion,Chile,compra normal,false
+HIST-168,2026-09-17T01:10:00,820000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-169,2026-09-17T02:30:00,910000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-170,2026-09-17T03:55:00,770000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-171,2026-09-17T09:20:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-172,2026-09-17T09:30:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-173,2026-09-17T09:40:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-174,2026-09-17T09:50:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-175,2026-09-17T10:00:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-176,2026-09-17T12:15:00,160000,CLP,SuperStore,retail,web,Santiago,Chile,compra normal,false
+HIST-177,2026-09-17T14:30:00,210000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-178,2026-09-17T16:00:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-179,2026-09-17T16:10:00,445000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-180,2026-09-17T16:20:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-181,2026-09-17T16:30:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-182,2026-09-17T16:40:00,475000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-183,2026-09-18T02:05:00,890000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-184,2026-09-18T03:40:00,940000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-185,2026-09-18T11:20:00,55000,CLP,GasStation,combustible,pos,Santiago,Chile,compra normal,false
+HIST-186,2026-09-18T13:45:00,110000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-187,2026-09-18T15:00:00,420000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-188,2026-09-18T15:10:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-189,2026-09-18T15:20:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-190,2026-09-18T15:30:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-191,2026-09-18T15:40:00,465000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-192,2026-09-18T18:30:00,340000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-193,2026-09-19T01:55:00,730000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-194,2026-09-19T03:15:00,810000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-195,2026-09-19T10:30:00,125000,CLP,SuperStore,retail,web,Valparaiso,Chile,compra normal,false
+HIST-196,2026-09-19T13:00:00,280000,CLP,TravelNow,viajes,web,Santiago,Chile,compra normal,false
+HIST-197,2026-09-19T16:10:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-198,2026-09-19T16:20:00,455000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-199,2026-09-19T16:30:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-200,2026-09-19T16:40:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-201,2026-09-19T16:50:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-202,2026-09-20T02:22:00,860000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-203,2026-09-20T04:10:00,950000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-204,2026-09-20T09:45:00,75000,CLP,BookHub,retail,web,Concepcion,Chile,compra normal,false
+HIST-205,2026-09-20T11:15:00,140000,CLP,SuperStore,retail,app,Santiago,Chile,compra normal,false
+HIST-206,2026-09-20T15:30:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-207,2026-09-20T15:40:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-208,2026-09-20T15:50:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-209,2026-09-20T16:00:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-210,2026-09-20T16:10:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-211,2026-09-20T18:45:00,420000,CLP,TechStore,tecnologia,web,Santiago,Chile,compra normal,false
+HIST-212,2026-09-21T01:35:00,690000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-213,2026-09-21T03:05:00,780000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-214,2026-09-21T10:00:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-215,2026-09-21T10:10:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-216,2026-09-21T10:20:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-217,2026-09-21T10:30:00,480000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-218,2026-09-21T10:40:00,495000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-219,2026-09-21T13:20:00,68000,CLP,GasStation,combustible,pos,Rancagua,Chile,compra normal,false
+HIST-220,2026-09-21T15:40:00,115000,CLP,BookHub,retail,app,Concepcion,Chile,compra normal,false
+HIST-221,2026-09-21T20:00:00,430000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-222,2026-09-21T21:10:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true
+HIST-223,2026-09-21T21:20:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada de soporte falsa solicitando transferencia para recuperar compra no reconocida,true
+HIST-224,2026-09-21T21:30:00,460000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,compra no reconocida y solicitud de transferencia,true
+HIST-225,2026-09-21T21:40:00,470000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,solicitud de codigo otp mediante llamada telefonica fingiendo resolver una compra no reconocida,true
+HIST-226,2026-09-22T02:15:00,840000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-227,2026-09-22T03:50:00,920000,CLP,CryptoExchange,financiero,web,Santiago,Chile,cuenta comprometida y transferencia rapida,true
+HIST-228,2026-09-22T09:15:00,130000,CLP,SuperStore,retail,web,Santiago,Chile,compra normal,false
+HIST-229,2026-09-22T11:00:00,320000,CLP,ElectroMarket,tecnologia,web,Valparaiso,Chile,compra normal,false
+HIST-230,2026-09-22T14:30:00,440000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,llamada para solicitar transferencia,true
+HIST-231,2026-09-22T14:40:00,450000,CLP,TechStore,e-commerce,telefono,Santiago,Chile,vishing con validacion de codigo para compra no reconocida,true

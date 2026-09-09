@@ -1,0 +1,688 @@
+# A2 — Investigador de Patrones: Detección Básica
+
+## Objetivo
+
+Implementar únicamente la primera versión funcional del Agente 2 (A2) del sistema de detección de fraude.
+
+A2 debe recibir múltiples resultados estructurados provenientes de A1, analizar las características comunes entre los casos y detectar posibles patrones de comportamiento fraudulento.
+
+El agente debe utilizar procesamiento determinístico mediante Python para calcular frecuencias y agrupaciones, y un LLM para interpretar los indicadores encontrados y formular una **hipótesis de nuevo patrón de fraude**.
+
+La salida debe ser un objeto estructurado y validado mediante Pydantic.
+
+Esta implementación debe ser simple y estar preparada para ser extendida posteriormente con procesamiento batch, datasets históricos, logging, Streamlit, LangGraph y los agentes A3-A5.
+
+---
+
+# Alcance
+
+Implementar solamente:
+
+1. Modelo Pydantic para representar el resultado de A2.
+2. Modelo Pydantic para representar los casos recibidos desde A1.
+3. Integración con Google Gemini.
+4. Análisis determinístico de los casos mediante Python.
+5. Agrupación básica por:
+
+   * modus operandi;
+   * canal de fraude;
+   * categoría de comercio;
+   * comercio;
+   * rango de monto.
+6. Detección de frecuencias y concentraciones.
+7. Prompt de interpretación en español.
+8. Método `process_cases()`.
+9. Generación de una hipótesis de patrón mediante el LLM.
+10. Validación de la respuesta mediante Pydantic.
+11. Un caso de prueba manual.
+
+---
+
+# Fuera de alcance
+
+NO implementar todavía:
+
+* A1.
+* A3, A4 ni A5.
+* LangGraph.
+* Streamlit.
+* Base de datos.
+* Consulta al histórico transaccional.
+* Backtesting.
+* Generación de reglas.
+* Bloqueo automático de transacciones.
+* Procesamiento de archivos CSV.
+* Procesamiento distribuido.
+* Paralelización.
+* Reintentos automáticos.
+* Logging estructurado.
+* Exportación JSONL.
+* Persistencia de patrones.
+* Sistema de trazabilidad completo de los cinco agentes.
+* Machine Learning.
+* Clustering avanzado.
+* Análisis geográfico avanzado.
+* Análisis de grafos.
+* Property-based testing.
+
+Estas funcionalidades serán implementadas en iteraciones posteriores.
+
+---
+
+# Estructura
+
+Crear únicamente la siguiente estructura:
+
+```text
+proyecto/
+├── agents/
+│   ├── __init__.py
+│   ├── a1_analyst.py
+│   └── a2_pattern_investigator.py
+├── models/
+│   ├── __init__.py
+│   └── schemas.py
+├── test_a2.py
+├── requirements.txt
+├── .env.example
+└── .gitignore
+```
+
+Si `models/schemas.py`, `requirements.txt`, `.env.example` o `.gitignore` ya existen debido a A1, modificarlos únicamente cuando sea necesario para incorporar A2.
+
+No crear archivos o módulos adicionales sin que sean necesarios para este alcance.
+
+---
+
+# 1. Modelo Pydantic
+
+Modificar `models/schemas.py` para incorporar los modelos necesarios para A2.
+
+## Caso recibido desde A1
+
+El modelo debe representar la estructura producida por A1.
+
+Utilizar:
+
+```python
+class CasoA1(BaseModel):
+    case_id: str
+    timestamp: datetime
+    transcript_text: str
+
+    monto_reportado: float | None = None
+    moneda: str | None = None
+    comercio_nombre: str | None = None
+    comercio_categoria: str | None = None
+    modus_operandi: str | None = None
+    canal_fraude: str | None = None
+
+    ubicacion_geografica: UbicacionGeografica = Field(
+        default_factory=UbicacionGeografica
+    )
+
+    nivel_confianza_extraccion: float = Field(
+        ge=0.0,
+        le=1.0
+    )
+```
+
+No modificar innecesariamente el contrato de A1.
+
+---
+
+# 2. Modelo de indicadores
+
+Crear un modelo para representar los indicadores calculados por Python.
+
+Ejemplo:
+
+```python
+class IndicadoresPatron(BaseModel):
+    total_casos: int
+
+    casos_por_modus_operandi: dict[str, int]
+    casos_por_canal: dict[str, int]
+    casos_por_categoria_comercio: dict[str, int]
+    casos_por_comercio: dict[str, int]
+
+    monto_promedio: float | None = None
+    monto_mediana: float | None = None
+    monto_minimo: float | None = None
+    monto_maximo: float | None = None
+```
+
+Los cálculos deben realizarse mediante Python y no mediante el LLM.
+
+---
+
+# 3. Modelo de hipótesis
+
+Crear un modelo para representar una hipótesis detectada por A2.
+
+Utilizar una estructura equivalente a:
+
+```python
+class HipotesisPatron(BaseModel):
+    pattern_id: str
+    hypothesis: str
+
+    indicators: dict[str, str | list[str] | int | float | None]
+
+    confidence: float = Field(
+        ge=0.0,
+        le=1.0
+    )
+```
+
+El campo `hypothesis` debe contener una descripción clara del posible patrón.
+
+Ejemplo:
+
+```text
+Posible campaña de vishing asociada a cargos no reconocidos
+en comercios de tecnología.
+```
+
+La hipótesis debe considerarse una **posibilidad**, no una confirmación de fraude.
+
+---
+
+# 4. Modelo de salida de A2
+
+Crear:
+
+```python
+class ResultadoA2(BaseModel):
+    analysis_id: str
+    timestamp: datetime
+    cases_analyzed: int
+
+    indicators: IndicadoresPatron
+
+    patterns: list[HipotesisPatron]
+```
+
+El resultado representa el análisis completo realizado por A2.
+
+---
+
+# 5. Integración con Gemini
+
+Modificar o utilizar `agents/a2_pattern_investigator.py`.
+
+Crear una clase:
+
+```python
+class A2PatternInvestigator:
+```
+
+El constructor debe recibir la API key mediante:
+
+```text
+GEMINI_API_KEY
+```
+
+No colocar ninguna API key directamente en el código.
+
+El modelo utilizado debe poder configurarse mediante:
+
+```text
+GEMINI_MODEL
+```
+
+Utilizar la misma configuración de Gemini utilizada por A1 cuando sea posible.
+
+No fijar innecesariamente una versión antigua del modelo.
+
+---
+
+# 6. Método process_cases()
+
+Implementar:
+
+```python
+def process_cases(
+    self,
+    cases: list[CasoA1]
+) -> ResultadoA2:
+```
+
+Este método debe:
+
+1. Recibir múltiples casos provenientes de A1.
+2. Validar que cada caso tenga una estructura compatible con `CasoA1`.
+3. Analizar los casos mediante Python.
+4. Calcular los indicadores estadísticos básicos.
+5. Identificar concentraciones relevantes.
+6. Enviar los indicadores calculados al LLM.
+7. Solicitar al LLM la interpretación de los indicadores.
+8. Generar una o más hipótesis de posibles patrones.
+9. Validar la respuesta mediante Pydantic.
+10. Generar un `analysis_id`.
+11. Agregar el timestamp del análisis.
+12. Retornar un objeto `ResultadoA2`.
+
+---
+
+# 7. Análisis determinístico
+
+El análisis estadístico básico debe realizarse mediante Python.
+
+A2 debe calcular como mínimo:
+
+### Frecuencia por modus operandi
+
+Ejemplo:
+
+```text
+cargo no reconocido + vishing → 47
+cargo no reconocido → 21
+phishing → 12
+```
+
+### Frecuencia por canal
+
+Ejemplo:
+
+```text
+telefono → 52
+web → 21
+app → 15
+```
+
+### Frecuencia por categoría de comercio
+
+Ejemplo:
+
+```text
+tecnologia → 47
+retail → 31
+servicios → 12
+```
+
+### Frecuencia por comercio
+
+Ejemplo:
+
+```text
+TechStore → 32
+ElectroMarket → 15
+CompuWorld → 8
+```
+
+### Estadísticas de monto
+
+Calcular cuando existan datos suficientes:
+
+```text
+promedio
+mediana
+mínimo
+máximo
+```
+
+No utilizar el LLM para realizar estos cálculos.
+
+---
+
+# 8. Manejo de valores nulos
+
+A2 debe manejar correctamente los campos que A1 haya identificado como `null`.
+
+Por ejemplo:
+
+```json
+{
+  "ciudad": null,
+  "pais": null
+}
+```
+
+No se debe inferir ni inventar información geográfica.
+
+Los valores nulos deben excluirse de las agrupaciones correspondientes.
+
+Por ejemplo, si:
+
+```text
+ciudad = null
+```
+
+el caso no debe aparecer como una ciudad llamada `"null"`.
+
+---
+
+# 9. Detección de concentraciones
+
+A2 debe identificar concentraciones simples utilizando los indicadores calculados.
+
+Por ejemplo:
+
+```text
+47 de 100 casos
+```
+
+corresponden a:
+
+```text
+modus_operandi = vishing
+canal = telefono
+categoria = tecnologia
+```
+
+Esto representa una combinación potencialmente relevante.
+
+La primera versión debe utilizar reglas simples y transparentes.
+
+No implementar todavía algoritmos de Machine Learning ni clustering.
+
+---
+
+# 10. Prompt
+
+El prompt debe estar en español.
+
+A2 debe comportarse como un **investigador de patrones de fraude bancario**.
+
+Su función es analizar indicadores previamente calculados y formular hipótesis sobre posibles patrones.
+
+El LLM debe recibir los indicadores calculados por Python.
+
+Debe buscar relaciones entre:
+
+* modus operandi;
+* canal;
+* comercio;
+* categoría del comercio;
+* montos;
+* frecuencia;
+* comportamiento temporal cuando exista información suficiente.
+
+Reglas importantes:
+
+* No inventar información.
+* No inventar casos.
+* No inventar estadísticas.
+* No modificar los valores calculados por Python.
+* No afirmar que un patrón es fraude confirmado.
+* No consultar información externa.
+* No realizar cálculos estadísticos por cuenta propia.
+* Las hipótesis deben basarse exclusivamente en los indicadores recibidos.
+* Si no existe evidencia suficiente para identificar un patrón relevante, devolver una lista de patrones vacía.
+* La salida debe ser exclusivamente JSON estructurado.
+* No incluir explicaciones fuera del JSON.
+
+El prompt debe indicar explícitamente el esquema esperado.
+
+---
+
+# 11. Ejemplo de entrada
+
+A2 podría recibir casos como:
+
+```json
+{
+  "cases": [
+    {
+      "case_id": "CALL-001",
+      "timestamp": "2026-09-07T12:20:31",
+      "transcript_text": "...",
+      "monto_reportado": 450000,
+      "moneda": "CLP",
+      "comercio_nombre": "TechStore",
+      "comercio_categoria": "tecnologia",
+      "modus_operandi": "cargo no reconocido y vishing",
+      "canal_fraude": "telefono",
+      "ubicacion_geografica": {
+        "ciudad": null,
+        "pais": null
+      },
+      "nivel_confianza_extraccion": 0.95
+    }
+  ]
+}
+```
+
+En una ejecución real A2 debería recibir múltiples casos.
+
+---
+
+# 12. Ejemplo conceptual de indicadores
+
+Para 100 casos:
+
+```json
+{
+  "total_casos": 100,
+  "casos_por_modus_operandi": {
+    "cargo no reconocido y vishing": 47,
+    "cargo no reconocido": 21,
+    "phishing": 12
+  },
+  "casos_por_canal": {
+    "telefono": 52,
+    "web": 21,
+    "app": 15
+  },
+  "casos_por_categoria_comercio": {
+    "tecnologia": 47,
+    "retail": 31,
+    "servicios": 12
+  },
+  "casos_por_comercio": {
+    "TechStore": 32,
+    "ElectroMarket": 15
+  },
+  "monto_promedio": 452340,
+  "monto_mediana": 450000,
+  "monto_minimo": 380000,
+  "monto_maximo": 520000
+}
+```
+
+---
+
+# 13. Ejemplo de salida esperada
+
+A2 podría generar:
+
+```json
+{
+  "analysis_id": "ANALYSIS-001",
+  "timestamp": "2026-09-07T12:40:00",
+  "cases_analyzed": 100,
+
+  "indicators": {
+    "total_casos": 100,
+    "casos_por_modus_operandi": {
+      "cargo no reconocido y vishing": 47,
+      "cargo no reconocido": 21,
+      "phishing": 12
+    },
+    "casos_por_canal": {
+      "telefono": 52,
+      "web": 21,
+      "app": 15
+    },
+    "casos_por_categoria_comercio": {
+      "tecnologia": 47,
+      "retail": 31,
+      "servicios": 12
+    },
+    "casos_por_comercio": {
+      "TechStore": 32,
+      "ElectroMarket": 15
+    },
+    "monto_promedio": 452340,
+    "monto_mediana": 450000,
+    "monto_minimo": 380000,
+    "monto_maximo": 520000
+  },
+
+  "patterns": [
+    {
+      "pattern_id": "PAT-001",
+      "hypothesis": "Posible concentración de casos de vishing asociados a cargos no reconocidos en comercios de tecnología.",
+      "indicators": {
+        "modus_operandi": [
+          "cargo no reconocido y vishing"
+        ],
+        "canal": [
+          "telefono"
+        ],
+        "comercio_categoria": [
+          "tecnologia"
+        ],
+        "cases": 47
+      },
+      "confidence": 0.87
+    }
+  ]
+}
+```
+
+Los valores son solamente ilustrativos.
+
+La implementación debe calcular los valores reales a partir de los casos recibidos.
+
+---
+
+# 14. Regla importante sobre A3
+
+A2 **NO debe consultar el histórico transaccional**.
+
+A2 únicamente analiza los casos recibidos desde A1.
+
+La validación contra transacciones históricas corresponde exclusivamente a A3.
+
+El flujo esperado es:
+
+```text
+A1
+ ↓
+Casos estructurados
+ ↓
+A2
+ ↓
+Hipótesis de patrón
+ ↓
+A3
+ ↓
+Validación contra histórico
+```
+
+A2 no debe determinar:
+
+* recurrencia histórica real;
+* costo financiero;
+* volumen financiero total;
+* impacto económico;
+* tasa de detección;
+* falsos positivos.
+
+Estos indicadores serán responsabilidad de A3 y A5.
+
+---
+
+# 15. Test manual
+
+Crear `test_a2.py`.
+
+El test debe:
+
+1. Cargar las variables de entorno.
+2. Crear una instancia de `A2PatternInvestigator`.
+3. Crear múltiples objetos `CasoA1`.
+4. Utilizar casos de prueba que compartan algunas características.
+5. Ejecutar `process_cases()`.
+6. Imprimir el resultado como JSON.
+
+Utilizar al menos 5 casos para demostrar que A2 puede encontrar una concentración.
+
+Ejemplo conceptual:
+
+```python
+cases = [
+    CasoA1(
+        case_id="CALL-001",
+        timestamp=datetime.now(),
+        transcript_text="...",
+        monto_reportado=450000,
+        moneda="CLP",
+        comercio_nombre="TechStore",
+        comercio_categoria="tecnologia",
+        modus_operandi="cargo no reconocido y vishing",
+        canal_fraude="telefono",
+        nivel_confianza_extraccion=0.95
+    ),
+    # más casos...
+]
+
+result = agent.process_cases(cases)
+
+print(result.model_dump_json(indent=2))
+```
+
+El objetivo es poder ejecutar:
+
+```bash
+python test_a2.py
+```
+
+y observar un `ResultadoA2` válido.
+
+---
+
+# 16. Dependencias
+
+Utilizar únicamente las dependencias necesarias.
+
+Mantener las dependencias utilizadas por A1 y agregar solamente las necesarias para A2.
+
+Como mínimo:
+
+```text
+pydantic
+python-dotenv
+langchain-core
+langchain-google-genai
+```
+
+No incorporar pandas, scikit-learn u otras librerías de análisis de datos en esta primera versión salvo que sean estrictamente necesarias.
+
+Para las agrupaciones y estadísticas básicas se debe priorizar la biblioteca estándar de Python.
+
+---
+
+# 17. Criterios de aceptación
+
+La implementación estará terminada cuando:
+
+* [ ] `A2PatternInvestigator` pueda inicializarse correctamente.
+* [ ] La API key no esté escrita en el código.
+* [ ] A2 pueda recibir múltiples objetos `CasoA1`.
+* [ ] Los casos sean validados mediante Pydantic.
+* [ ] Python calcule las frecuencias de los casos.
+* [ ] Python calcule las estadísticas básicas de montos.
+* [ ] Los valores `null` sean manejados correctamente.
+* [ ] A2 pueda identificar concentraciones entre los casos.
+* [ ] Los indicadores sean enviados al LLM.
+* [ ] El LLM genere una hipótesis basada únicamente en los indicadores.
+* [ ] La hipótesis sea validada mediante Pydantic.
+* [ ] La confianza esté entre `0.0` y `1.0`.
+* [ ] A2 no consulte el histórico transaccional.
+* [ ] A2 no genere reglas.
+* [ ] A2 no realice backtesting.
+* [ ] A2 no calcule impacto financiero definitivo.
+* [ ] `python test_a2.py` produzca un `ResultadoA2` válido.
+
+---
+
+# Restricción principal
+
+A2 debe limitarse a **analizar múltiples casos provenientes de A1 y formular hipótesis de posibles patrones**.
+
+No debe validar definitivamente dichos patrones ni transformarlos en reglas.
+
+La responsabilidad de A2 termina cuando entrega una hipótesis estructurada para que A3 pueda validarla contra el histórico transaccional.

@@ -1,0 +1,6 @@
+case_id,timestamp,transcript
+CALL-001,2026-09-08T10:00:00,"Hola, quiero desconocer una compra de $450.000 realizada ayer en TechStore. Yo nunca hice esa compra. Además, recibí una llamada donde me solicitaron realizar una transferencia para recuperar el dinero."
+CALL-002,2026-09-08T10:05:00,"Me llamaron desde un supuesto banco y me indicaron validar un código para una compra no reconocida en TechStore."
+CALL-003,2026-09-08T10:10:00,"Recibí una llamada de soporte y me dijeron que debía transferir dinero para recuperar una compra no reconocida en TechStore."
+CALL-004,2026-09-08T10:15:00,"Otro caso similar: llamada telefónica, compra no reconocida y solicitud de transferencia en TechStore."
+CALL-005,2026-09-08T10:20:00,"Me contactaron por teléfono y me pidieron un OTP para resolver una compra no reconocida en TechStore por $470.000."

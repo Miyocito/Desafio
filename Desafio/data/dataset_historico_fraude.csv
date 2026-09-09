@@ -1,0 +1,101 @@
+ID_Caso,ID_Usuario,Fecha_Hora,Monto_USD,Tipo_Transaccion,Canal,Pais_Origen,Dispositivo,Intentos_Login_Fallidos,Score_Riesgo_Interno,Estado_Analisis
+FRD-2026-001,USR-2309,2026-01-29 00:47:00,815.27,Retiro en ATM,Banca Web,AR,Samsung S23,0,39,Cerrado Sin Fraude
+FRD-2026-002,USR-2209,2026-04-19 01:01:00,677.88,Transferencia,Banca Web,AR,Android Genérico,1,39,Cerrado Sin Fraude
+FRD-2026-003,USR-1451,2026-04-25 18:17:00,3306.16,Transferencia,Banca Web,BR,MacBook Pro,5,81,Falso Positivo
+FRD-2026-004,USR-1198,2026-04-02 11:38:00,1168.01,Retiro en ATM,App Móvil,BR,MacBook Pro,0,29,Cerrado Sin Fraude
+FRD-2026-005,USR-2130,2026-03-17 20:39:00,796.9,Retiro en ATM,Banca Web,BR,iPhone 14,0,23,Cerrado Sin Fraude
+FRD-2026-006,USR-1476,2026-08-10 03:24:00,450.52,Retiro en ATM,API Terceros,BR,Windows PC,2,18,Cerrado Sin Fraude
+FRD-2026-007,USR-1546,2026-06-29 21:41:00,204.45,Transferencia,Banca Web,US,Desconocido,1,29,Cerrado Sin Fraude
+FRD-2026-008,USR-2310,2026-06-26 03:14:00,4107.57,Retiro en ATM,App Móvil,US,iPhone 14,4,77,Confirmado Fraude
+FRD-2026-009,USR-2022,2026-04-12 02:29:00,6355.59,Pago en Línea,Presencial,US,Samsung S23,7,88,Confirmado Fraude
+FRD-2026-010,USR-2010,2026-01-24 04:55:00,5376.66,Transferencia,Banca Web,BR,Samsung S23,6,87,Confirmado Fraude
+FRD-2026-011,USR-1514,2026-05-22 00:43:00,359.27,Transferencia,Presencial,BR,Windows PC,1,15,Cerrado Sin Fraude
+FRD-2026-012,USR-1006,2026-07-04 23:16:00,191.88,Pago en Línea,App Móvil,BR,Windows PC,2,15,Cerrado Sin Fraude
+FRD-2026-013,USR-2086,2026-08-24 00:38:00,7211.69,Retiro en ATM,API Terceros,CL,iPhone 14,5,100,Confirmado Fraude
+FRD-2026-014,USR-2161,2026-01-21 02:46:00,795.1,Compra Física,App Móvil,US,Samsung S23,0,40,Cerrado Sin Fraude
+FRD-2026-015,USR-1542,2026-05-16 04:27:00,7968.47,Pago en Línea,Banca Web,BR,Windows PC,5,95,Confirmado Fraude
+FRD-2026-016,USR-1507,2026-02-27 02:21:00,94.48,Transferencia,Banca Web,US,Samsung S23,0,45,Cerrado Sin Fraude
+FRD-2026-017,USR-1468,2026-01-18 01:55:00,5848.36,Retiro en ATM,App Móvil,US,Samsung S23,7,81,Confirmado Fraude
+FRD-2026-018,USR-2180,2026-05-02 07:50:00,794.19,Compra Física,API Terceros,AR,iPhone 14,1,27,Cerrado Sin Fraude
+FRD-2026-019,USR-1841,2026-04-30 23:03:00,6703.85,Transferencia,App Móvil,CO,Desconocido,4,78,Confirmado Fraude
+FRD-2026-020,USR-1918,2026-02-05 13:11:00,6752.14,Retiro en ATM,API Terceros,AR,iPhone 14,3,92,Confirmado Fraude
+FRD-2026-021,USR-1030,2026-01-24 07:10:00,7365.88,Compra Física,API Terceros,CO,Samsung S23,6,80,Falso Positivo
+FRD-2026-022,USR-1543,2026-08-26 01:18:00,2915.06,Compra Física,API Terceros,BR,Samsung S23,7,76,Confirmado Fraude
+FRD-2026-023,USR-1102,2026-05-30 15:32:00,91.54,Pago en Línea,App Móvil,US,iPhone 14,2,9,Cerrado Sin Fraude
+FRD-2026-024,USR-1481,2026-04-14 03:56:00,5772.93,Pago en Línea,App Móvil,US,iPhone 14,7,93,Confirmado Fraude
+FRD-2026-025,USR-2371,2026-07-03 10:15:00,4471.96,Retiro en ATM,API Terceros,AR,Desconocido,3,99,Confirmado Fraude
+FRD-2026-026,USR-2153,2026-01-26 02:34:00,1056.33,Pago en Línea,Presencial,AR,Windows PC,1,28,Cerrado Sin Fraude
+FRD-2026-027,USR-1323,2026-04-23 17:45:00,7556.41,Retiro en ATM,App Móvil,BR,Android Genérico,4,78,Confirmado Fraude
+FRD-2026-028,USR-2133,2026-02-09 08:18:00,4785.16,Pago en Línea,Presencial,AR,Desconocido,3,83,Falso Positivo
+FRD-2026-029,USR-1566,2026-01-12 00:21:00,5085.92,Pago en Línea,Presencial,AR,Desconocido,7,88,Confirmado Fraude
+FRD-2026-030,USR-2415,2026-08-20 04:34:00,521.45,Transferencia,Presencial,US,Android Genérico,1,7,Cerrado Sin Fraude
+FRD-2026-031,USR-1746,2026-08-19 01:57:00,430.88,Retiro en ATM,Banca Web,BR,Samsung S23,1,40,Cerrado Sin Fraude
+FRD-2026-032,USR-2271,2026-07-11 04:59:00,223.44,Pago en Línea,Banca Web,AR,MacBook Pro,1,26,Cerrado Sin Fraude
+FRD-2026-033,USR-2371,2026-08-10 23:51:00,465.22,Pago en Línea,Presencial,AR,Desconocido,1,7,Cerrado Sin Fraude
+FRD-2026-034,USR-1455,2026-02-21 14:22:00,484.17,Retiro en ATM,Banca Web,AR,iPhone 14,0,22,Cerrado Sin Fraude
+FRD-2026-035,USR-1571,2026-03-31 20:32:00,2660.69,Compra Física,Presencial,CL,iPhone 14,3,83,Falso Positivo
+FRD-2026-036,USR-1707,2026-07-06 02:27:00,1788.51,Transferencia,API Terceros,US,Samsung S23,3,88,Falso Positivo
+FRD-2026-037,USR-1883,2026-01-18 03:58:00,4796.3,Retiro en ATM,Presencial,BR,iPhone 14,6,96,Confirmado Fraude
+FRD-2026-038,USR-1260,2026-02-19 13:42:00,4139.49,Compra Física,Banca Web,US,Android Genérico,5,75,Falso Positivo
+FRD-2026-039,USR-2187,2026-06-05 20:20:00,618.3,Compra Física,API Terceros,CO,Desconocido,2,15,Cerrado Sin Fraude
+FRD-2026-040,USR-1173,2026-03-14 16:42:00,2960.16,Retiro en ATM,App Móvil,AR,Desconocido,4,81,Confirmado Fraude
+FRD-2026-041,USR-1973,2026-06-06 01:29:00,4713.45,Compra Física,Banca Web,BR,Desconocido,4,82,Confirmado Fraude
+FRD-2026-042,USR-1870,2026-02-26 05:51:00,553.19,Compra Física,App Móvil,US,Samsung S23,2,34,Cerrado Sin Fraude
+FRD-2026-043,USR-2087,2026-05-24 19:20:00,894.95,Compra Física,API Terceros,US,MacBook Pro,1,35,Cerrado Sin Fraude
+FRD-2026-044,USR-1530,2026-07-12 07:53:00,4359.17,Retiro en ATM,API Terceros,BR,Samsung S23,5,97,Falso Positivo
+FRD-2026-045,USR-1654,2026-08-17 17:05:00,850.64,Pago en Línea,Banca Web,AR,MacBook Pro,1,9,Cerrado Sin Fraude
+FRD-2026-046,USR-1834,2026-03-26 04:29:00,7381.45,Compra Física,App Móvil,BR,MacBook Pro,3,93,Confirmado Fraude
+FRD-2026-047,USR-1720,2026-03-18 04:54:00,4332.93,Compra Física,Banca Web,CO,Samsung S23,6,75,Confirmado Fraude
+FRD-2026-048,USR-1338,2026-08-04 14:58:00,109.9,Pago en Línea,App Móvil,CO,Android Genérico,0,32,Cerrado Sin Fraude
+FRD-2026-049,USR-1945,2026-02-16 04:16:00,3693.75,Compra Física,Presencial,BR,MacBook Pro,5,87,Confirmado Fraude
+FRD-2026-050,USR-1963,2026-01-05 23:34:00,939.67,Transferencia,Presencial,AR,Desconocido,0,7,Cerrado Sin Fraude
+FRD-2026-051,USR-1506,2026-02-21 00:39:00,681.12,Pago en Línea,Banca Web,AR,MacBook Pro,1,18,Cerrado Sin Fraude
+FRD-2026-052,USR-2432,2026-03-07 11:10:00,1115.38,Transferencia,Banca Web,PE,iPhone 14,2,41,Cerrado Sin Fraude
+FRD-2026-053,USR-1768,2026-04-12 01:12:00,7026.91,Transferencia,Banca Web,BR,Desconocido,3,94,Confirmado Fraude
+FRD-2026-054,USR-1877,2026-06-19 11:04:00,525.89,Retiro en ATM,App Móvil,CO,MacBook Pro,2,28,Cerrado Sin Fraude
+FRD-2026-055,USR-1941,2026-07-01 04:27:00,4521.68,Pago en Línea,Presencial,US,Android Genérico,7,98,Confirmado Fraude
+FRD-2026-056,USR-1177,2026-03-13 14:15:00,7031.19,Compra Física,API Terceros,PE,iPhone 14,6,80,Falso Positivo
+FRD-2026-057,USR-1697,2026-03-13 19:44:00,297.21,Retiro en ATM,App Móvil,US,Samsung S23,1,31,Cerrado Sin Fraude
+FRD-2026-058,USR-2137,2026-07-14 07:44:00,360.14,Compra Física,API Terceros,CO,iPhone 14,2,30,Cerrado Sin Fraude
+FRD-2026-059,USR-1498,2026-03-20 04:37:00,4265.77,Retiro en ATM,API Terceros,US,Android Genérico,7,98,Falso Positivo
+FRD-2026-060,USR-1627,2026-03-06 07:07:00,237.93,Pago en Línea,Presencial,CL,Desconocido,1,35,Cerrado Sin Fraude
+FRD-2026-061,USR-2483,2026-05-31 16:38:00,439.45,Retiro en ATM,App Móvil,AR,Windows PC,0,24,Cerrado Sin Fraude
+FRD-2026-062,USR-2450,2026-05-17 04:17:00,769.06,Transferencia,App Móvil,US,Windows PC,0,36,Cerrado Sin Fraude
+FRD-2026-063,USR-1025,2026-05-27 09:30:00,310.45,Compra Física,API Terceros,PE,Samsung S23,0,35,Cerrado Sin Fraude
+FRD-2026-064,USR-1133,2026-04-13 04:04:00,2053.68,Transferencia,Banca Web,US,Android Genérico,3,82,Confirmado Fraude
+FRD-2026-065,USR-1779,2026-04-26 14:19:00,735.46,Compra Física,Presencial,US,Android Genérico,0,11,Cerrado Sin Fraude
+FRD-2026-066,USR-2281,2026-02-24 08:42:00,196.27,Transferencia,Banca Web,AR,Samsung S23,1,31,Cerrado Sin Fraude
+FRD-2026-067,USR-2411,2026-06-02 03:18:00,6069.42,Transferencia,Banca Web,PE,Desconocido,3,89,Confirmado Fraude
+FRD-2026-068,USR-2207,2026-06-19 06:27:00,6873.1,Transferencia,Banca Web,BR,Samsung S23,3,77,Falso Positivo
+FRD-2026-069,USR-2218,2026-07-11 04:58:00,6048.27,Retiro en ATM,API Terceros,US,MacBook Pro,7,83,Confirmado Fraude
+FRD-2026-070,USR-1081,2026-08-16 13:47:00,1154.67,Retiro en ATM,Presencial,CL,iPhone 14,2,41,Cerrado Sin Fraude
+FRD-2026-071,USR-1042,2026-07-15 04:52:00,7454.47,Retiro en ATM,App Móvil,US,MacBook Pro,7,80,Falso Positivo
+FRD-2026-072,USR-1712,2026-04-15 10:20:00,3373.42,Transferencia,Banca Web,PE,MacBook Pro,7,87,Confirmado Fraude
+FRD-2026-073,USR-1644,2026-03-06 04:07:00,4186.11,Compra Física,App Móvil,BR,Android Genérico,7,81,Confirmado Fraude
+FRD-2026-074,USR-1905,2026-07-14 02:13:00,2289.27,Retiro en ATM,Banca Web,PE,MacBook Pro,7,95,Falso Positivo
+FRD-2026-075,USR-2128,2026-01-04 17:26:00,780.77,Transferencia,Banca Web,CL,MacBook Pro,1,14,Cerrado Sin Fraude
+FRD-2026-076,USR-2467,2026-03-16 16:45:00,553.58,Retiro en ATM,API Terceros,CO,MacBook Pro,1,14,Cerrado Sin Fraude
+FRD-2026-077,USR-1390,2026-08-24 03:32:00,7572.61,Pago en Línea,App Móvil,PE,MacBook Pro,5,91,Confirmado Fraude
+FRD-2026-078,USR-1611,2026-08-03 03:37:00,3743.31,Compra Física,Banca Web,CO,Android Genérico,7,92,Confirmado Fraude
+FRD-2026-079,USR-2428,2026-03-03 02:24:00,6083.98,Pago en Línea,API Terceros,BR,Windows PC,6,100,Confirmado Fraude
+FRD-2026-080,USR-1258,2026-05-09 02:21:00,1599.76,Transferencia,API Terceros,US,Android Genérico,6,79,Falso Positivo
+FRD-2026-081,USR-1542,2026-03-28 01:44:00,7701.91,Compra Física,App Móvil,PE,Desconocido,6,95,Confirmado Fraude
+FRD-2026-082,USR-1140,2026-03-02 03:43:00,7859.2,Retiro en ATM,Banca Web,BR,iPhone 14,3,99,Confirmado Fraude
+FRD-2026-083,USR-1094,2026-03-25 01:18:00,642.09,Retiro en ATM,Presencial,CO,Samsung S23,2,41,Cerrado Sin Fraude
+FRD-2026-084,USR-1368,2026-02-13 05:05:00,286.3,Compra Física,Banca Web,CO,Android Genérico,1,45,Cerrado Sin Fraude
+FRD-2026-085,USR-1941,2026-03-07 21:00:00,97.9,Compra Física,Presencial,BR,Android Genérico,2,27,Cerrado Sin Fraude
+FRD-2026-086,USR-1612,2026-06-13 03:44:00,7046.68,Retiro en ATM,API Terceros,PE,Samsung S23,4,78,Confirmado Fraude
+FRD-2026-087,USR-1605,2026-06-29 09:01:00,1093.63,Compra Física,Presencial,CL,Android Genérico,1,36,Cerrado Sin Fraude
+FRD-2026-088,USR-1471,2026-06-05 11:14:00,757.62,Pago en Línea,Presencial,BR,Desconocido,2,45,Cerrado Sin Fraude
+FRD-2026-089,USR-1080,2026-03-21 14:02:00,6358.63,Retiro en ATM,Banca Web,CL,Windows PC,4,80,Confirmado Fraude
+FRD-2026-090,USR-1749,2026-05-16 01:58:00,6352.64,Retiro en ATM,Banca Web,PE,MacBook Pro,3,85,Confirmado Fraude
+FRD-2026-091,USR-1462,2026-08-09 21:46:00,324.71,Compra Física,Presencial,CL,MacBook Pro,1,12,Cerrado Sin Fraude
+FRD-2026-092,USR-1754,2026-06-22 23:43:00,813.06,Retiro en ATM,API Terceros,BR,Windows PC,0,35,Cerrado Sin Fraude
+FRD-2026-093,USR-2268,2026-08-15 17:20:00,5720.06,Pago en Línea,App Móvil,BR,MacBook Pro,4,78,Confirmado Fraude
+FRD-2026-094,USR-1623,2026-05-07 02:06:00,5858.16,Pago en Línea,Banca Web,CO,MacBook Pro,7,98,Falso Positivo
+FRD-2026-095,USR-2341,2026-01-26 01:39:00,2912.25,Compra Física,Presencial,BR,Desconocido,4,89,Confirmado Fraude
+FRD-2026-096,USR-2320,2026-04-02 01:25:00,798.69,Retiro en ATM,Banca Web,CL,MacBook Pro,2,45,Cerrado Sin Fraude
+FRD-2026-097,USR-1043,2026-01-13 10:15:00,707.8,Pago en Línea,Banca Web,CL,Android Genérico,1,19,Cerrado Sin Fraude
+FRD-2026-098,USR-1302,2026-07-21 19:00:00,6690.34,Retiro en ATM,Banca Web,AR,Android Genérico,3,78,Falso Positivo
+FRD-2026-099,USR-1487,2026-05-31 03:01:00,4919.56,Pago en Línea,Presencial,US,Samsung S23,3,98,Falso Positivo
+FRD-2026-100,USR-2031,2026-02-26 19:02:00,1198.32,Retiro en ATM,API Terceros,BR,iPhone 14,1,30,Cerrado Sin Fraude
